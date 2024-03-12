@@ -18,10 +18,10 @@ images.forEach((img)=>{
         img.style.border = '5px solid cyan';
         img.id = 'selected';
         document.getElementById('reset').style.display = 'inline';
-        count++;
-        }
-        if(count > 2) {
+        if(count == 2) {
             verifyBtn.style.display = 'inline'; 
+        }
+        count++;
         }
     }));
 })
@@ -50,4 +50,4 @@ verifyBtn.addEventListener('click', ()=>{
     para.innerHTML = "We can't verify you as a human. You selected the non-identical tiles.";
     verifyBtn.style.display = 'none'; 
    }
-})
+});
